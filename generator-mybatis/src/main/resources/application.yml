@@ -1,0 +1,7 @@
+
+
+mybatis:
+  mapper-locations=classpath: mybatis/*.xml
+  type-aliases-package: cn.world.mybatisgenerator.bean
+  configuration:
+    map-underscore-to-camel-case: true

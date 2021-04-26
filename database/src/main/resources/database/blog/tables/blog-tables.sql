@@ -1,0 +1,13 @@
+# 博客应用的数据库表 sql
+
+# 用户表
+CREATE TABLE IF NOT EXISTS `sys_user`(
+ `id` INT UNSIGNED AUTO_INCREMENT KEY COMMENT '用户编号',
+ `username` VARCHAR(20) NOT NULL COMMENT '用户名',
+ `password` CHAR(32) NOT NULL COMMENT '密码',
+ `nickname` VARCHAR(20) NOT NULL COMMENT '昵称',
+ `sex` VARCHAR(2)	COMMENT '性别',
+ `tel` char(11) UNIQUE COMMENT '电话',
+ `age` TINYINT UNSIGNED DEFAULT 18 COMMENT '年龄',
+ `email` VARCHAR(50) UNIQUE COMMENT '邮箱'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

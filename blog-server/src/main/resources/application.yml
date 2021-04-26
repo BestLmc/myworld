@@ -1,0 +1,17 @@
+### 服务端口号
+server:
+  port: 8080
+
+spring:
+  application:
+    name: world-base
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=GMT&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: 123456
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: cn.world.blogserver.entities    # 所有Entity别名类所在包
